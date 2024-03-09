@@ -7,7 +7,7 @@ from collections import defaultdict
 import en_core_web_trf
 
 # Load the spaCy model
-from assignment1.parse_args import parse_args
+from parse_args import parse_args
 
 nlp = en_core_web_trf.load()
 
@@ -66,7 +66,7 @@ def censor_addresses(text):
     return censored_text, {"addresses": len(re.findall(address_pattern, text))}
 
 
-def output_stats(stats, statsMode):
+def output_stats(stats, stats_output):
     stats_str = "Files processed: {}\nNames redacted: {}\nDates redacted: {}\nPhone numbers redacted: {}\nAddresses redacted: {}\nPositions redacted: {}".format(
         stats["files_processed"],
         stats["names"],
@@ -75,12 +75,12 @@ def output_stats(stats, statsMode):
         stats["addresses"],
         stats["positions"],
     )
-    if statsMode == "stdout" or statsMode is None:
-        sys.stdout.write(stats_str)
-    elif statsMode == "stderr":
-        sys.stderr.write(stats_str)
+    if stats_output == "stdout" or stats_output is None:
+        print(stats_str)
+    elif stats_output == "stderr":
+        print(stats_str, file=sys.stderr)
     else:
-        with open(statsMode, "w") as f:
+        with open(stats_output, "w") as f:
             f.write(stats_str)
 
 
@@ -96,17 +96,11 @@ def process_files(args):
             "positions": [],
         },
     )
-    # absoluteFilePaths1 = [os.path.abspath(path) for path in args.input]
-    # absoluteFilePaths2 = os.path.abspath(args.output)
-    # print(absoluteFilePaths1)
-    # print(absoluteFilePaths2)
-    filePathList = []
-    inputPattern = args.input
-    file_paths = glob.glob(inputPattern)
-    absoluteFilePaths1 = [os.path.abspath(path) for path in file_paths]
+    absoluteFilePaths1 = [os.path.abspath(x) for x in args.input]
     absoluteFilePaths2 = os.path.abspath(args.output)
     print(absoluteFilePaths1)
     print(absoluteFilePaths2)
+    filePathList = []
     for input in absoluteFilePaths1:
         file_path = glob.glob(input)
         filePathList.extend(file_path)
@@ -135,8 +129,7 @@ def process_files(args):
         os.makedirs(absoluteFilePaths2, exist_ok=True)
         with open(output_file_path, "w", encoding="utf-8") as censored_file:
             censored_file.write(censored_text)
-    statsMode = args.stats
-    output_stats(overall_stats, statsMode)
+    output_stats(overall_stats, absoluteFilePaths2)
 
 
 # Main function and argument parsing would go here
