@@ -26,15 +26,6 @@ Follow these steps to set up The Censoror on your local machine:
     pipenv install
     ```
 
-## Usage
-
-Run The Censoror using the following command:
-
-```bash
-pipenv run python censoror.py --input '*.txt' \
-                              --names --dates --phones --address \
-                              --output 'files/' \
-                              --stats stderr
 ## Parameters
 
 - `--input`: Specifies the glob pattern for input files. This allows the program to process multiple files at once based on the pattern provided.
@@ -46,39 +37,41 @@ pipenv run python censoror.py --input '*.txt' \
   - `--address`: Censors physical addresses.
 - `--stats`: Defines where to output statistics of the censorship process. This can be the name of a file where statistics will be written, or special keywords `stderr` or `stdout` to output the statistics to the standard error or standard output streams, respectively.
 
+## Dataset
 
-bash
-Copy code
+For testing, utilize the Enron Email Dataset with the following commands:
+
+```bash
 wget https://www.cs.cmu.edu/~enron/enron_mail_20150507.tar.gz
 tar xvzf enron_mail_20150507.tar.gz -C /tmp
-Submission Files
+```
+
+## Submission Files
+
 Your submission should include the following files:
 
-README.md: This file, containing an overview and instructions for using the project.
-COLLABORATORS: A file detailing any collaboration that occurred during the assignment.
-Testing
-To ensure The Censoror functions as expected, run tests with:
+- `README.md`: This file, providing an overview and instructions for using the project.
+- `COLLABORATORS`: A document detailing any collaborations that occurred during the assignment.
 
-bash
-Copy code
+## Testing
+
+To ensure The Censoror functions as expected, execute tests using the following command:
+
+```bash
 pipenv run python -m pytest
-Ensure your tests comprehensively cover all functionalities of the application.
+```
+## License
 
-Contributing
-Contributions to The Censoror are welcome. Follow these steps to contribute:
+This project is licensed under the MIT License. For more details, see the `LICENSE.md` file.
 
-Fork the repository.
-Create a new feature branch (git checkout -b feature/AmazingFeature).
-Commit your changes (git commit -am 'Add some AmazingFeature').
-Push to the branch (git push origin feature/AmazingFeature).
-Submit a pull request.
-License
-This project is licensed under the MIT License. See the LICENSE.md file for more details.
+## Acknowledgments
 
-Acknowledgments
-Enron Email Dataset for providing a real-world dataset for testing.
-The instructors and TAs of CIS 6930 for their guidance and support.
-Contact
-Your Name: [Insert Your Name]
-Email: [Insert Your Email]
-Project Link: https://github.com/99004327-Sourabh/cis6930sp24-assignment1
+- **Enron Email Dataset**: Used for providing a real-world dataset for testing.
+- **CIS 6930 Instructors and TAs**: For their invaluable guidance and support throughout the project.
+
+## Contact
+
+- **Your Name**: Sourabh
+- **Project Link**: [https://github.com/99004327-Sourabh/cis6930sp24-assignment1](https://github.com/99004327-Sourabh/cis6930sp24-assignment1)
+
+Please make sure to update the placeholders `[Insert Your Name]` and `[Insert Your Email]` with your actual name and email address before publishing or sharing the README.md.
