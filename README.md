@@ -70,4 +70,4 @@ This project is licensed under the MIT License. For more details, see the `LICEN
 - **Your Name**: Sourabh
 - **Project Link**: [https://github.com/99004327-Sourabh/cis6930sp24-assignment1](https://github.com/99004327-Sourabh/cis6930sp24-assignment1)
 
-Please make sure to update the placeholders `[Insert Your Name]` and `[Insert Your Email]` with your actual name and email address before publishing or sharing the README.md.
+
