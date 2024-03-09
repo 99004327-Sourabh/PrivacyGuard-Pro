@@ -3,8 +3,8 @@ from setuptools import setup, find_packages
 setup(
 	name='assignment1',
 	version='1.0',
-	author='You Name',
-	authour_email='your ufl email',
+	author='Sourabh Rajashekar',
+	authour_email='rajashekar.s@ufl.edu',
 	packages=find_packages(exclude=('tests', 'docs')),
 	setup_requires=['pytest-runner'],
 	tests_require=['pytest']	
