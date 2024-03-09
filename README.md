@@ -64,10 +64,6 @@ pipenv run python -m pytest
 
 This project is licensed under the MIT License. For more details, see the `LICENSE.md` file.
 
-## Acknowledgments
-
-- **Enron Email Dataset**: Used for providing a real-world dataset for testing.
-- **CIS 6930 Instructors and TAs**: For their invaluable guidance and support throughout the project.
 
 ## Contact
 
