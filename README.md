@@ -51,7 +51,6 @@ tar xvzf enron_mail_20150507.tar.gz -C /tmp
 Your submission should include the following files:
 
 - `README.md`: This file, providing an overview and instructions for using the project.
-- `COLLABORATORS`: A document detailing any collaborations that occurred during the assignment.
 
 ## Testing
 
