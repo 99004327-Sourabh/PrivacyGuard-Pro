@@ -64,9 +64,6 @@ pipenv run python -m pytest
 This project is licensed under the MIT License. For more details, see the `LICENSE.md` file.
 
 
-## Contact
 
-- **Your Name**: Sourabh
-- **Project Link**: [https://github.com/99004327-Sourabh/cis6930sp24-assignment1](https://github.com/99004327-Sourabh/cis6930sp24-assignment1)
 
 
