@@ -1,4 +1,4 @@
-# CIS 6930 Spring 2024 Assignment 1: The Censoror
+# PrivacyGuard Pro
 
 ## Introduction
 
