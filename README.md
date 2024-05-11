@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Censoror is a Python application developed for CIS 6930 Spring 2024, designed to automate the redaction of sensitive information from plain text documents. This tool ensures privacy and compliance with data protection standards, making it ideal for processing documents with sensitive content such as police reports, court transcripts, and hospital records. For testing and demonstration, the project uses the Enron Email Dataset.
+The Censoror is a Python application designed to automate the redaction of sensitive information from plain text documents. This tool ensures privacy and compliance with data protection standards, making it ideal for processing documents with sensitive content such as police reports, court transcripts, and hospital records. For testing and demonstration, the project uses the Enron Email Dataset.
 
 ## Prerequisites
 
